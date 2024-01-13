@@ -2,13 +2,20 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import Button from './component/button'
+import Navbar from './component/navbar'
+import NoticesBar from './component/noticesBar'
+import InfoBar from './component/infoBar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <InfoBar/>
+    <Navbar/>
+    <NoticesBar/>
+    <Button text="Click Me" onClick={console.log("working")} />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
