@@ -1,0 +1,76 @@
+/* InfoBar Styles */
+/* Add the font import */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@100&family=Segoe+UI:wght@100&display=swap');
+
+.info-bar {
+    background-color: #fff;
+    padding: 5px;
+    border-bottom: 0.1px solid #cccccca8; 
+    color: #8a8a8a  !important;/* Add a border below InfoBar */
+    font-family: 'Ubuntu', 'Segoe UI', sans-serif;
+}
+  
+  /* Content Styles */
+  .info-bar .content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Left Side Styles */
+  .left-side {
+    display: flex;
+    align-items: center;
+     /* Grey color */
+  }
+  
+  /* Socials Menu Styles */
+  .socials-menu {
+    list-style: none;
+    display: flex;
+    gap: 2px; /* Small gap of 2px between icons and text */
+    padding: 0;
+  }
+  
+  .socials-menu li {
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 100;
+  }
+  
+  /* Right Side Styles */
+  .right-side {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Underline Text Styles */
+  .underline-text {
+     /* Grey color */
+    color: #8a8a8a;
+    font-size: 10px;
+    font-weight: 100; /* Make the font weight lighter */
+    text-decoration: underline;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: 'Ubuntu', 'Segoe UI', sans-serif;
+  }
+  
+
+  /* Icon Styles */
+  .attached-icons {
+    color: #b9b9b9;
+    font-weight: 100;
+    margin-right: 5px;
+  }
+
+  .icons {
+    color: #b9b9b9;
+    font-weight: 100;
+  }
+
