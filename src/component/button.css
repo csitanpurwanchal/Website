@@ -1,0 +1,20 @@
+/* Button.css */
+
+.button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: opacity 0.3s ease;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .button:hover {
+    opacity: 0.8;
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  
