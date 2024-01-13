@@ -1,0 +1,60 @@
+/* NoticesBar Styles */
+.notices-bar {
+    background-color: #ce4444;
+    padding: 0; /* Set padding to 0 */
+  }
+  
+  /* Content Styles */
+  .notices-bar .content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Hide overflow for the scrolling list */
+  }
+  
+  /* Notices Button Styles */
+  .notices-button {
+    margin: 2px;
+    background-color: #fff;
+    color: #ce4444;
+    border: none;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: lighter;
+    cursor: pointer;
+  }
+  
+  /* Horizontal Auto-Scrolling List Styles */
+  .scrolling-list {
+    overflow: hidden;
+    white-space: nowrap;
+    flex-grow: 1; /* Make the scrolling list grow and occupy all available space */
+  }
+  
+  .scrolling-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    animation: scroll 20s linear infinite; /* Adjust the animation duration as needed */
+  }
+  
+  .scrolling-list li {
+    display: inline-block;
+    margin-right: 20px; /* Adjust the spacing between notices */
+    font-size: 10px; /* Set font size to 12px */
+    font-weight: bold; /* Set font weight to bold */
+    color: #fff; /* Set text color to white */
+  }
+  
+  /* Scroll Animation */
+  @keyframes scroll {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
