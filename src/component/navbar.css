@@ -59,12 +59,11 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    border: .1px solid #ccc;
+    background-color: rgba(254, 145, 145, 0.449);
+    backdrop-filter: blur(30px);
     border-radius: 2px;
     display: none;
-    padding: 10px;
+    padding: 0px;
     z-index: 1001;
     width: max-content;
   }
@@ -73,6 +72,10 @@
     list-style: none;
   }
   
+  .dropdown-menu li {
+    padding: 20px;
+    border-bottom: 0.1px solid #fffefeb1;
+  }
   .dropdown-menu.open {
     display: block;
   }
@@ -92,3 +95,64 @@
     font-size: 15px;
   }
   
+  /* Link Style */
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .active {
+    color: #CE4444;
+  }
+
+  .hamburger-menu{
+    display: none;
+  }
+
+  /* Add this CSS for mobile menu */
+/* Add this CSS for mobile menu */
+@media screen and (max-width: 768px) {
+  .menu-wrapper {
+    display: none;
+  }
+
+  .menu-wrapper.mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #ccccccef;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .menu-list li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.554);
+    margin: 10px 0;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  /* Hide these elements in mobile menu */
+  .moon-icon,
+  .dark-mode-toggle {
+    display: none;
+  }
+
+  .navbar.mobile-menu-open {
+    height: auto;
+  }
+}
