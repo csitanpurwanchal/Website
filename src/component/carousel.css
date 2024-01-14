@@ -1,0 +1,58 @@
+/* carousel.css */
+
+.carousel {
+    width: 50%;
+    border-radius: 7px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ce4444; /* Background color of event title */
+    color: white; /* Text color of event title */
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 7px 7px 0 0; /* Rounded corners only at the top */
+  }
+  
+  .event-name {
+    padding: 2px;
+    background-color: #ce4444;
+  }
+  
+  .buttonslist {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    position: absolute;
+    margin-top: 50%;
+    padding: 10px;
+    z-index: 999;
+    /* Background blur effect */
+  }
+  
+  .icon-button {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%; /* Making it round */
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Increase the width to provide enough space for the icon */
+    height: 30px; /* Increase the height to provide enough space for the icon */
+  }
+  
+  .icon-button:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+  }
+  
