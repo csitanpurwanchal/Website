@@ -1,0 +1,136 @@
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 20%;
+    }
+}
+
+.hero {
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    
+}
+
+  /* Content Styles */
+  .content {
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+  }
+
+
+  .wave{
+    margin: 0px;
+    padding: 0px;
+   margin-top: 9px;
+    width: 100%;
+    
+  }
+
+.background {
+    position: absolute; /* Position relative to the nearest positioned ancestor (.parent-component) */
+    width: 100%; /* Width relative to the parent's width */
+    height: 100%; /* Height relative to the parent's height */
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #FCF4F4;
+    overflow: hidden;
+    z-index: -1; /* Set a lower z-index */
+}
+
+
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #F9E1E1;
+    animation: animate 19s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+    left: 34%;
+    width: 112px;
+    height: 112px;
+    bottom: -112px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 80%;
+    width: 157px;
+    height: 157px;
+    bottom: -157px;
+    animation-delay: 2s;
+}
+.background li:nth-child(2) {
+    left: 81%;
+    width: 185px;
+    height: 185px;
+    bottom: -185px;
+    animation-delay: 4s;
+}
+.background li:nth-child(3) {
+    left: 24%;
+    width: 159px;
+    height: 159px;
+    bottom: -159px;
+    animation-delay: 6s;
+}
+.background li:nth-child(4) {
+    left: 48%;
+    width: 129px;
+    height: 129px;
+    bottom: -129px;
+    animation-delay: 18s;
+}
+.background li:nth-child(5) {
+    left: 22%;
+    width: 135px;
+    height: 135px;
+    bottom: -135px;
+    animation-delay: 8s;
+}
+
+
+.left, .right {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+
+    width: 50%;
+}
+
+.heading{
+    font-size: 60px;
+    color: #ce4444;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.subheading{
+    font-size: 25px;
+    padding-bottom: 25px;
+}
+
+.buttonsRow{
+    display: flex;
+}
