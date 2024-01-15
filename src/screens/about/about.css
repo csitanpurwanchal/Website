@@ -81,3 +81,35 @@
     background-color: #FCF4F4;
     width: 5px;/* Color of the track */
   }
+
+  /* Add the following styles for responsiveness */
+
+@media only screen and (max-width: 768px) {
+    .about {
+      flex-direction: column !important;
+    }
+
+    .sidebar{
+        display: none;
+    }
+    .horizontal{
+        display: block !important;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+    .horizontal li{
+        width: 80% !important;
+    }
+    .textbtn{
+        display: none;
+    }
+    .team-member-card{
+        width: 100%;
+        
+    }
+  }
+  
+
+  

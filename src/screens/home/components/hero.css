@@ -125,6 +125,7 @@
     padding: 0px;
    margin-top: 9px;
     width: 100%;
+   background-color: transparent;
     
   }
 
@@ -180,4 +181,17 @@
 
 .buttonsRow{
     display: flex;
+}
+
+/* Add media query for responsiveness */
+@media (max-width: 768px) {
+    .buttonsRow button {
+        width: fit-content !important;
+    }
+    .right{
+        display: none;
+    }
+    .left{
+        width: 100%;
+    }
 }

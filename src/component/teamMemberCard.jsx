@@ -27,11 +27,13 @@ const TeamMemberCard = ({
             onClick={() => (window.location.href = contactUrl)}
             fontSize="20px"
           />
-          <CustomButton
-            text="Visit Site"
-            onClick={() => (window.location.href = siteUrl)}
-            fontSize="20px"
-          />
+          <div className="textbtn">
+            <CustomButton
+              text="Visit Site"
+              onClick={() => (window.location.href = siteUrl)}
+              fontSize="20px"
+            />
+          </div>
         </div>
 
         <div className="social-icons-container">

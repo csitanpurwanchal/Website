@@ -40,31 +40,27 @@ const Navbar = () => {
           {/* Navigation menu items */}
           <nav className={`menu-wrapper ${isMobileMenuOpen ? "mobile" : ""}`}>
             <ul className="menu-list">
-              <li>
+              <li onClick={toggleMobileMenu}>
                 <NavLink to="/" exact activeClassName="active">
                   HOME
                 </NavLink>
               </li>
-              <li>NOTICES</li>
-              <li className="services-dropdown">SERVICES</li>
-              <li>
+              <li onClick={toggleMobileMenu}>NOTICES</li>
+              <li onClick={toggleMobileMenu}>SERVICES</li>
+              <li onClick={toggleMobileMenu}>
                 <NavLink to="/about" activeClassName="active">
                   ABOUT
                 </NavLink>
               </li>
-              <li>
+
+              <li>OUR EVENTS</li>
+              <li onClick={toggleMobileMenu}>
                 <NavLink to="/contact" activeClassName="active">
-                  CONTACT
+                  <div className="navbarButton">CONTACT US</div>
                 </NavLink>
               </li>
-              <li>OUR EVENTS</li>
             </ul>
           </nav>
-
-          {/* Dark mode toggle button */}
-          <div className="dark-mode-toggle" onClick={toggleDarkMode}>
-            <FaMoon className="moon-icon" />
-          </div>
 
           {/* Hamburger icon for small screens */}
           <div className="hamburger-menu" onClick={toggleMobileMenu}>

@@ -17,8 +17,12 @@ const Hero = () => {
               CSIT Association Nepal - Purwanchal
             </div>
             <div className="buttonsRow">
-              <CustomButton onClick={console.log("")} text={"CONTACT"} />
-              <TextButton />
+              <CustomButton
+                onClick={console.log("")}
+                text={"CONTACT"}
+                width="28%"
+              />
+              <TextButton width="28%" />
             </div>
           </div>
           <div className="right">
