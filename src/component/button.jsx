@@ -3,6 +3,7 @@ import React from "react";
 import "./button.css";
 
 const CustomButton = ({
+  width,
   text,
   onClick,
   color = "CE4444",
@@ -13,6 +14,7 @@ const CustomButton = ({
     backgroundColor: `#${color}`,
     color: `#${textColor}`,
     fontSize: fontSize,
+    width: width,
   };
 
   return (
