@@ -41,12 +41,17 @@
   }
   
   .scrolling-list li {
+    cursor: pointer;
     padding-bottom: 5px;
     display: inline-block;
     margin-right: 20px; /* Adjust the spacing between notices */
     font-size: 10px; /* Set font size to 12px */
     font-weight: bold; /* Set font weight to bold */
     color: #fff; /* Set text color to white */
+  }
+
+  .scrolling-list li:hover {
+    text-decoration: underline;
   }
   
   /* Scroll Animation */

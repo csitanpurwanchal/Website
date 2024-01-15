@@ -40,21 +40,21 @@ const Navbar = () => {
           {/* Navigation menu items */}
           <nav className={`menu-wrapper ${isMobileMenuOpen ? "mobile" : ""}`}>
             <ul className="menu-list">
-              <li>
+              <li onClick={toggleMobileMenu}>
                 <NavLink to="/" exact activeClassName="active">
                   HOME
                 </NavLink>
               </li>
-              <li>NOTICES</li>
-              <li className="services-dropdown">SERVICES</li>
-              <li>
+              <li onClick={toggleMobileMenu}>NOTICES</li>
+              <li onClick={toggleMobileMenu}>SERVICES</li>
+              <li onClick={toggleMobileMenu}>
                 <NavLink to="/about" activeClassName="active">
                   ABOUT
                 </NavLink>
               </li>
 
               <li>OUR EVENTS</li>
-              <li>
+              <li onClick={toggleMobileMenu}>
                 <NavLink to="/contact" activeClassName="active">
                   <div className="navbarButton">CONTACT US</div>
                 </NavLink>
