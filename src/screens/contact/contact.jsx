@@ -13,6 +13,7 @@ const Contact = () => {
         <div className="internalSections">
           <div className="leftSide">
             <h2>Contact Details</h2>
+            <div className="blob"></div>
             <p>The fastest way to contact us is to call us directly.</p>
             <div className="row">
               <FaSquarePhone className="icon" size={45} />
