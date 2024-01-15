@@ -1,13 +1,21 @@
-const Sidebar = ({ headings, handleScroll }) => {
+// Sidebar component
+const Sidebar = ({ children, headings, handleScroll, highlightedIndex }) => {
   return (
-    <div className="sidebar">
-      <ul>
-        {headings.map((heading, index) => (
-          <li key={index} onClick={() => handleScroll(index)}>
-            {heading}
-          </li>
-        ))}
-      </ul>
+    <div className="entireSidebarSection">
+      <div className="sidebar">
+        <ul>
+          {headings.map((heading, index) => (
+            <li
+              key={index}
+              onClick={() => handleScroll(index)}
+              className={highlightedIndex === index ? "highlighted" : ""}
+            >
+              {heading}
+            </li>
+          ))}
+        </ul>
+      </div>
+      {children}
     </div>
   );
 };
