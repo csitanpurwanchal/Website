@@ -41,6 +41,7 @@
   }
   
   .scrolling-list li {
+    padding-bottom: 5px;
     display: inline-block;
     margin-right: 20px; /* Adjust the spacing between notices */
     font-size: 10px; /* Set font size to 12px */

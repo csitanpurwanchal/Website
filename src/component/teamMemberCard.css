@@ -1,0 +1,55 @@
+.team-member-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    
+    text-align: center;
+    padding: 20px;
+  }
+  
+h3{
+    color: #ce4444;
+}
+
+  .buttons-container {
+    display: flex;
+    justify-content: center; /* Ensure buttons appear in a single row */
+    margin-top: 15px;
+  }
+  
+  .buttons-container button {
+    
+    margin: 10px; /* Adjust margin to ensure buttons are close together */
+  }
+  
+  .social-icons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  
+  .team-member-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  
+  .social-icons-container a {
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .social-icons-container a:hover {
+    margin-top: 10px;
+    color: #ce4444;
+  }
+  .cardContent{
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
