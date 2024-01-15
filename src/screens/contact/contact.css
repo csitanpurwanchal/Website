@@ -1,0 +1,116 @@
+/* ContactUs.css */
+.pageheading {
+    padding: 10px;
+    color: #ce4444;
+    font-size: 30px;
+    font-weight: 500;
+    border-top: 0.1px solid #cccccca8;
+    border-bottom: 0.1px solid #cccccca8;
+    font-family: 'Ubuntu', 'Segoe UI', sans-serif;
+}
+
+h2 {
+    color: #ce4444;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.internalSections {
+    display: flex;
+    width: 99%;
+    padding: 20px;
+}
+
+.type {
+    font-weight: 500;
+    color: #ce4444;
+    font-family: 'Oswald', sans-serif;
+}
+
+.leftSide {
+    padding: 20px;
+    width: 50%;
+    border-right: 10px solid #ce4444;
+    border-bottom: 10px solid #ce4444;
+    border-top: 1px solid #ce4444;
+    border-left: 1px solid #ce4444;
+    border-radius: 30px;
+}
+
+.rightField {
+    width: 50%;
+    padding: 15px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.icon {
+    margin: 0px !important;
+    padding: 20px !important;
+}
+
+.one {
+    margin-right: 5px !important
+}
+
+.two{
+    margin-left: 5px !important
+}
+.inputRow {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.inputField {
+    flex: 1;
+    margin: 0px;
+    padding: 30px;
+    border-radius: 4px;
+    border: 2px solid #322b2b62; /* Updated border color */
+}
+
+.textArea {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #322b2b62; /* Updated border color */
+}
+
+.inputField input:focus {
+    border: 2px solid #ce4444; /* Border color when the input field is focused */
+}
+
+.textArea:focus {
+    border: 2px solid #ce4444; /* Border color when the textarea is focused */
+    outline: none;
+}
+
+
+/* Add the following styles to make the row equal width */
+
+.contactButton {
+    margin-top: 10px; /* Adjusted margin for the button */
+}
+
+/* Add media query for responsiveness */
+@media (max-width: 768px) {
+    .internalSections {
+        flex-direction: column;
+    }
+
+    .leftSide,
+    .rightField {
+        width: 100%;
+    }
+}
