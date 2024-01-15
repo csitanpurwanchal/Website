@@ -52,19 +52,15 @@ const Navbar = () => {
                   ABOUT
                 </NavLink>
               </li>
+
+              <li>OUR EVENTS</li>
               <li>
                 <NavLink to="/contact" activeClassName="active">
-                  CONTACT
+                  <div className="navbarButton">CONTACT US</div>
                 </NavLink>
               </li>
-              <li>OUR EVENTS</li>
             </ul>
           </nav>
-
-          {/* Dark mode toggle button */}
-          <div className="dark-mode-toggle" onClick={toggleDarkMode}>
-            <FaMoon className="moon-icon" />
-          </div>
 
           {/* Hamburger icon for small screens */}
           <div className="hamburger-menu" onClick={toggleMobileMenu}>
