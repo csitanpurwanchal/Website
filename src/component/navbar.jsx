@@ -46,32 +46,17 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>NOTICES</li>
-              <li
-                onMouseEnter={toggleServicesMenu}
-                onMouseLeave={closeServicesMenu}
-                onClick={toggleServicesMenu}
-                className="services-dropdown"
-              >
-                SERVICES
-                <LiaAngleDownSolid size={12} className="dropdown-icon" />
-                <div
-                  className={`dropdown-menu ${
-                    isServicesMenuOpen ? "open" : ""
-                  }`}
-                >
-                  <ul>
-                    <li>Service 1</li>
-                    <li>Service 2</li>
-                    <li>Service 3</li>
-                  </ul>
-                </div>
-              </li>
+              <li className="services-dropdown">SERVICES</li>
               <li>
                 <NavLink to="/about" activeClassName="active">
                   ABOUT
                 </NavLink>
               </li>
-              <li>CONTACT</li>
+              <li>
+                <NavLink to="/contact" activeClassName="active">
+                  CONTACT
+                </NavLink>
+              </li>
               <li>OUR EVENTS</li>
             </ul>
           </nav>
