@@ -1,0 +1,48 @@
+/* Card.css */
+
+.card-container {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33.33% - 16px); 
+  margin: 8px;
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+}
+
+.icon-container {
+  padding: 12px; 
+  background-color: transparent; 
+}
+
+.icon-container svg {
+  width: 40px;
+  height: 40px;
+}
+.card-title {
+  padding: 8px;
+  background-color: transparent; 
+}
+
+.card-title h5 {
+  margin: 0;
+  font-size: 20px; 
+  color: #333;
+}
+
+.card-body {
+  padding: 8px;
+}
+
+.card-body p {
+  margin: 0;
+  font-size: 16px; 
+  color: #555;
+}
