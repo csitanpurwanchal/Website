@@ -2,6 +2,7 @@ import "./contact.css";
 import { FaEnvelope, FaMapMarker } from "react-icons/fa";
 import { FaSquarePhone } from "react-icons/fa6";
 import CustomButton from "../../component/button";
+import EmailContact from "./emailcontact";
 
 const Contact = () => {
   return (
@@ -64,6 +65,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <EmailContact />
     </div>
   );
 };
