@@ -1,13 +1,72 @@
 .content {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .homeAbout {
-    background-color: #CE4444;
-    width: 100%;
-    height: 700px;
-  }
+.homeAbout {
+  background-color: #CE4444;
+  width: 100%;
+  height: 700px;
+}
+.content1{
+  width: 100%;
+  text-align: center;
+  font-size: 38px;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  color: white;
+ 
+
+}
+.para{
+  font-size: small;
+  padding-top: 1rem;
+  align-items: center;
+  
+}
+.underline{
+  border-bottom: 5px solid white;
+  padding-bottom:9px;
+  width: 80px;
+  margin: 0 auto;  
+}
+.container{
+  background-color: #CE4444;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+.content0{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+margin-top: 50px;
+
+}
+.content0 img{
+width: 620px;
+height: 350px;
+object-fit: cover;
+margin-right: 60px;
+}  
+button {
+background-color: white;
+color: #CE4444;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+
+
+}
+.button-bottom{
+
+margin-top: 20px;
+
+
+}
