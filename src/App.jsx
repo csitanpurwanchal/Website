@@ -6,6 +6,7 @@ import InfoBar from "./component/infoBar";
 import Home from "./screens/home/home";
 import About from "./screens/about/about";
 import Contact from "./screens/contact/contact";
+import Service from "./screens/services/service";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Service />} />
         </Routes>
       </Router>
     </>
