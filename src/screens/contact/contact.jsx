@@ -1,11 +1,48 @@
+import React, {useRef, useState} from "react";
+import emailjs from "@emailjs/browser";
 import "./contact.css";
 import { FaEnvelope, FaMapMarker } from "react-icons/fa";
 import { FaSquarePhone } from "react-icons/fa6";
 import CustomButton from "../../component/button";
-import EmailContact from "./emailcontact";
 
 
 const Contact = () => {
+  const form = useRef();
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!name || !email || !message){
+      console.log("Please fill out all fields");
+      return;
+    }
+
+    emailjs 
+    .sendForm(
+      "service_8zu1nbn",
+      "template_er5zvgx",
+      form.current,
+      "qh4XGHeUiKvMo4ARc"
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+        console.log("message sent");
+
+        setName("");
+        setEmail("");
+        setMessage("");
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
+ 
   return (
     <div className="contentContact">
       <div className="pageheading">
@@ -39,34 +76,47 @@ const Contact = () => {
               </div>
             </div>
           </div>
+          <form ref={form} onSubmit={sendEmail}>
           <div className="rightField">
             <div className="column">
               <div className="row">
                 <input
                   type="text"
                   placeholder="Name"
-                  className="inputField one"
+                  className="inputField one" 
+                  name="from_name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
                 <input
                   type="email"
                   placeholder="Email"
-                  className="inputField two"
+                  className="inputField two" 
+                  name="reply_to"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <textarea
                 rows="13"
                 placeholder="Message"
                 className="textArea"
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
 
               <div className="contactButton">
-                <CustomButton text="SEND NOW" width="100%" />
+                <CustomButton text="SEND NOW" type="submit" width="100%" />
               </div>
+            
             </div>
           </div>
+          </form>
         </div>
       </div>
-      <EmailContact/>
+      
+      
     </div>
     
   );

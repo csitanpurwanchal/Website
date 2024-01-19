@@ -36,7 +36,18 @@ const EmailContact = () => {
         <textarea name="message" />
         <input type="submit" value="Send" />
       </form>
-    
+  
   );
 };
+
 export default EmailContact;
+
+
+
+
+
+
+
+
+
+
