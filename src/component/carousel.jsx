@@ -6,7 +6,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Import React Icon
 import "./carousel.css";
 
 const Carousel = ({
-  imgSource = "https://scontent.fktm8-1.fna.fbcdn.net/v/t39.30808-6/416318364_766877855483631_2637189327138196359_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3635dc&_nc_ohc=9BfWoND4gPUAX9gFNW-&_nc_ht=scontent.fktm8-1.fna&oh=00_AfDCAqA-bR2rky_n4sOGc4k5rkKnBqHBfWcVx8WhReW3BA&oe=65A92413",
+  imgSource = "https://media.discordapp.net/attachments/1192097257454063636/1199255383030644796/417740676_766146188890131_3733565436466369577_n.png?ex=65c1e09c&is=65af6b9c&hm=89afdbe145b632fc6eccf4682238b1a7f764998caf034dd707dade4143ed3314&=&format=webp&quality=lossless&width=701&height=701",
   eventTitle = "Dummy Heading",
   onPrevClick,
   onNextClick,
