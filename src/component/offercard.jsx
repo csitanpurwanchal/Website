@@ -1,12 +1,11 @@
-import React from 'react';
-import './Card.css';
+// Card.js
+import React from "react";
+import "./offerCard.css";
 
 function Card({ title, body, icon }) {
   return (
-    <div className='card-container'>
-      <div className="icon-container">
-        {icon}
-      </div>
+    <div className="card-container">
+      <div className="icon-container">{icon}</div>
       <div className="card-title">
         <h5>{title}</h5>
       </div>

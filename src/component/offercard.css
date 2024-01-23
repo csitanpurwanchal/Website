@@ -1,0 +1,48 @@
+/* Card.css */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
+.card-container {
+  border: 1px solid #ccc;
+  overflow: hidden;
+  width: calc(26% - 14px); 
+  height: 150px; 
+  margin: 7px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card-content {
+  width: 90%;
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-container {
+  background-color: transparent;
+}
+
+.icon-container svg {
+  height: 40px;
+}
+
+.card-title {
+  background-color: transparent;
+}
+
+.card-title h5 {
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.card-body p {
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+}

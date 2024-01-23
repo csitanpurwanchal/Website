@@ -1,6 +1,6 @@
 import React from "react";
 import "./homeAbout.css";
-import Card from "../../../component/card";
+import Card from "../../../component/offercard";
 import { FaCalendarAlt, FaBaseballBall } from "react-icons/fa";
 
 const HomeAbout = () => {
