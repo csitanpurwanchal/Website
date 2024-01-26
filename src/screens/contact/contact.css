@@ -57,13 +57,16 @@ h2 {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    width: 100%;
+    width: 90vh;   
+    /* 100% */
 }
 
 .column {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
+    
+    
 }
 
 .icon {
@@ -116,6 +119,7 @@ h2 {
 
 .contactButton {
     margin-top: 10px; /* Adjusted margin for the button */
+    width: 90vh
 }
 
 /* Add media query for responsiveness */
@@ -145,4 +149,7 @@ h2 {
     .contentContact .content {
         width: 100%;
     }
+    
 }
+
+
