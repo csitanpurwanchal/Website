@@ -46,7 +46,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li onClick={toggleMobileMenu}>NOTICES</li>
-              <li onClick={toggleMobileMenu}>SERVICES</li>
+
               <li onClick={toggleMobileMenu}>
                 <NavLink to="/about" activeClassName="active">
                   ABOUT
@@ -54,6 +54,11 @@ const Navbar = () => {
               </li>
 
               <li>OUR EVENTS</li>
+              <li onClick={toggleMobileMenu}>
+                <NavLink to="/getinvolved" activeClassName="active">
+                  GET INVOLVED
+                </NavLink>
+              </li>
               <li onClick={toggleMobileMenu}>
                 <NavLink to="/contact" activeClassName="active">
                   <div className="navbarButton">CONTACT US</div>
