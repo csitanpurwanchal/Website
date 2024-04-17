@@ -1,0 +1,115 @@
+.pageheading{
+    padding: 10px;
+    color: #ce4444;
+    font-size: 30px;
+    font-weight: 500;
+    border-top: 0.1px solid #cccccca8; 
+    border-bottom: 0.1px solid #cccccca8; 
+    font-family: 'Ubuntu', 'Segoe UI', sans-serif;
+}
+
+.about {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 77.5vh; /* Set height to 100% of the viewport height */
+    overflow-y: scroll;
+    background-color: white;
+    
+  }
+  
+
+  .entireSidebarSection{
+    background-color: #FCF4F4;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    
+  }
+  .sidebar {
+    border-right: 0.1px solid #cccccca8; 
+    width: 20%;
+    padding: 20px;
+    background-color: white;
+    overflow-y: hidden; /* Use auto to enable scroll only when needed */
+    flex-shrink: 0; /* Prevent the sidebar from shrinking if content is too small */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar li.highlighted {
+    background-color: #ce4444;
+    color: white;
+  }
+  
+  .sidebar li.highlighted:hover {
+    background-color: #ce4444 !important;
+    color: white !important;
+  }
+  .sidebar li:hover {
+    background-color: #FCF4F4;
+  }
+  
+  
+
+
+  /* For Webkit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    margin: 2px;
+    width: 5px;
+    /* Set the right property to position the scrollbar on the right side */
+    right: 0;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #a3a3a3; /* Color of the thumb */
+    border-radius: 6px; /* Rounded corners of the thumb */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #FCF4F4;
+    width: 5px;/* Color of the track */
+  }
+
+  /* Add the following styles for responsiveness */
+
+@media only screen and (max-width: 768px) {
+    .about {
+      flex-direction: column !important;
+    }
+
+    .sidebar{
+        display: none;
+    }
+    .horizontal{
+        display: block !important;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+    .horizontal li{
+        width: 80% !important;
+    }
+    .textbtn{
+        display: none;
+    }
+    .team-member-card{
+        width: 100%;
+        
+    }
+  }
+  
+
+  
