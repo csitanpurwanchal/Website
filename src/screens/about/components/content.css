@@ -100,4 +100,45 @@
     margin: 0 0px 00px; /* Adjust the margin accordingly */
     transition: background-color 0.3s;
   }
-  
+/* Add these styles to your content.css or inline styling */
+
+/* Wrapper for the "Our Team" heading and dropdown */
+.heading-with-dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Space between heading and team member list */
+}
+
+/* Dropdown style with border and background */
+.year-select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid black; /* Black border */
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 150px;
+}
+
+/* Focus styles */
+.year-select:focus {
+  outline: none;
+  border-color: black; /* Black border on focus */
+  box-shadow: 0 0 5px rgba(206, 68, 68, 0.5); /* Red glow effect */
+}
+
+/* Option styles */
+.year-select option {
+  background-color: #fff; /* Default option background */
+  color: black; /* Default text color */
+}
+
+/* When an option is selected, change the background to #ce4444 */
+.year-select:checked option {
+  background-color: #ce4444;
+  color: #fff; /* White text for better contrast */
+}
+
+

@@ -1,141 +1,11 @@
-// Content component
 import React from "react";
 import "./content.css";
 import { GrConnect } from "react-icons/gr";
 import { GiLifeSupport } from "react-icons/gi";
 import { PiFlowerLotusFill } from "react-icons/pi";
-import TeamMemberCard from "../../../component/teamMemberCard";
 import CustomButton from "../../../component/button";
-const Content = ({ headings, handleRef, handleHighlight }) => {
-  const teamMembersData = [
-    {
-      name: "Pukar Bajgain",
-      position: "President",
-      imageUrl:
-        "https://scontent.fktm8-1.fna.fbcdn.net/v/t39.30808-6/252769449_4473667032670877_8490505483187830605_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=hK8MUDsdkcEAX-QoqZv&_nc_ht=scontent.fktm8-1.fna&oh=00_AfAOY4KJoQoUYT7NIXCTYU9z9inWfP-M5kbHTVfQqoCfCA&oe=65A9C03A",
-      contactUrl: "mailto:john@example.com",
-      siteUrl: "https://www.johndoe.com",
-      facebookUrl: "https://www.facebook.com/johndoe",
-      twitterUrl: "https://twitter.com/johndoe",
-      linkedinUrl: "https://www.linkedin.com/in/johndoe",
-      githubUrl: "https://github.com/johndoe",
-    },
-    {
-      name: "Bishwa Kiran Poudel",
-      position: "Vice-President",
-      imageUrl:
-        "https://scontent.fktm8-1.fna.fbcdn.net/v/t39.30808-6/252769449_4473667032670877_8490505483187830605_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=hK8MUDsdkcEAX-QoqZv&_nc_ht=scontent.fktm8-1.fna&oh=00_AfAOY4KJoQoUYT7NIXCTYU9z9inWfP-M5kbHTVfQqoCfCA&oe=65A9C03A",
-      contactUrl: "mailto:jane@example.com",
-      siteUrl: "https://www.janesmith.com",
-      facebookUrl: "https://www.facebook.com/janesmith",
-      twitterUrl: "https://twitter.com/janesmith",
-      linkedinUrl: "https://www.linkedin.com/in/janesmith",
-      githubUrl: "https://github.com/janesmith",
-    },
-    {
-      name: "John Doe",
-      position: "Software Developer",
-      imageUrl:
-        "https://scontent.fktm8-1.fna.fbcdn.net/v/t39.30808-6/252769449_4473667032670877_8490505483187830605_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=hK8MUDsdkcEAX-QoqZv&_nc_ht=scontent.fktm8-1.fna&oh=00_AfAOY4KJoQoUYT7NIXCTYU9z9inWfP-M5kbHTVfQqoCfCA&oe=65A9C03A",
-      contactUrl: "mailto:john@example.com",
-      siteUrl: "https://www.johndoe.com",
-      facebookUrl: "https://www.facebook.com/johndoe",
-      twitterUrl: "https://twitter.com/johndoe",
-      linkedinUrl: "https://www.linkedin.com/in/johndoe",
-      githubUrl: "https://github.com/johndoe",
-    },
-    {
-      name: "Jane Smith",
-      position: "UX Designer",
-      imageUrl: "https://example.com/janesmith.jpg",
-      contactUrl: "mailto:jane@example.com",
-      siteUrl: "https://www.janesmith.com",
-      facebookUrl: "https://www.facebook.com/janesmith",
-      twitterUrl: "https://twitter.com/janesmith",
-      linkedinUrl: "https://www.linkedin.com/in/janesmith",
-      githubUrl: "https://github.com/janesmith",
-    },
-    {
-      name: "John Doe",
-      position: "Software Developer",
-      imageUrl: "https://example.com/johndoe.jpg",
-      contactUrl: "mailto:john@example.com",
-      siteUrl: "https://www.johndoe.com",
-      facebookUrl: "https://www.facebook.com/johndoe",
-      twitterUrl: "https://twitter.com/johndoe",
-      linkedinUrl: "https://www.linkedin.com/in/johndoe",
-      githubUrl: "https://github.com/johndoe",
-    },
-    {
-      name: "Jane Smith",
-      position: "UX Designer",
-      imageUrl: "https://example.com/janesmith.jpg",
-      contactUrl: "mailto:jane@example.com",
-      siteUrl: "https://www.janesmith.com",
-      facebookUrl: "https://www.facebook.com/janesmith",
-      twitterUrl: "https://twitter.com/janesmith",
-      linkedinUrl: "https://www.linkedin.com/in/janesmith",
-      githubUrl: "https://github.com/janesmith",
-    },
-    {
-      name: "John Doe",
-      position: "Software Developer",
-      imageUrl: "https://example.com/johndoe.jpg",
-      contactUrl: "mailto:john@example.com",
-      siteUrl: "https://www.johndoe.com",
-      facebookUrl: "https://www.facebook.com/johndoe",
-      twitterUrl: "https://twitter.com/johndoe",
-      linkedinUrl: "https://www.linkedin.com/in/johndoe",
-      githubUrl: "https://github.com/johndoe",
-    },
-    {
-      name: "Jane Smith",
-      position: "UX Designer",
-      imageUrl: "https://example.com/janesmith.jpg",
-      contactUrl: "mailto:jane@example.com",
-      siteUrl: "https://www.janesmith.com",
-      facebookUrl: "https://www.facebook.com/janesmith",
-      twitterUrl: "https://twitter.com/janesmith",
-      linkedinUrl: "https://www.linkedin.com/in/janesmith",
-      githubUrl: "https://github.com/janesmith",
-    },
-    {
-      name: "John Doe",
-      position: "Software Developer",
-      imageUrl: "https://example.com/johndoe.jpg",
-      contactUrl: "mailto:john@example.com",
-      siteUrl: "https://www.johndoe.com",
-      facebookUrl: "https://www.facebook.com/johndoe",
-      twitterUrl: "https://twitter.com/johndoe",
-      linkedinUrl: "https://www.linkedin.com/in/johndoe",
-      githubUrl: "https://github.com/johndoe",
-    },
-    {
-      name: "Jane Smith",
-      position: "UX Designer",
-      imageUrl: "https://example.com/janesmith.jpg",
-      contactUrl: "mailto:jane@example.com",
-      siteUrl: "https://www.janesmith.com",
-      facebookUrl: "https://www.facebook.com/janesmith",
-      twitterUrl: "https://twitter.com/janesmith",
-      linkedinUrl: "https://www.linkedin.com/in/janesmith",
-      githubUrl: "https://github.com/janesmith",
-    },
-    {
-      name: "John Doe",
-      position: "Software Developer",
-      imageUrl: "https://example.com/johndoe.jpg",
-      contactUrl: "mailto:john@example.com",
-      siteUrl: "https://www.johndoe.com",
-      facebookUrl: "https://www.facebook.com/johndoe",
-      twitterUrl: "https://twitter.com/johndoe",
-      linkedinUrl: "https://www.linkedin.com/in/johndoe",
-      githubUrl: "https://github.com/johndoe",
-    },
 
-    // Add more team members as needed
-    // ...
-  ];
+const Content = ({ headings, handleRef, handleHighlight }) => {
 
   return (
     <div className="contents">
@@ -182,7 +52,7 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
       <div className="section inversion">
         <div className="subtitle2">Membership Benefits</div>
         <p>
-          Being a CSITAN Genral Member comes with the following perks and
+          Being a CSITAN General Member comes with the following perks and
           benefits.
         </p>
         <ul className="horizontal">
@@ -283,7 +153,15 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
               Keep an eye on our updates for the opening of the registration
               form in the near future.
             </p>
-            <CustomButton text="JOIN NOW" />
+            <a
+  href="https://docs.google.com/forms/u/1/d/1oMgPA03XmL_QfDDmB2XCbjO-MVZChQgsSjZ87_n6GBE/edit?usp=forms_home&ths=true"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="new-classname">Join Now</button>
+</a>
+
+
           </div>
         </div>
       </div>
@@ -295,7 +173,7 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
       >
         <div className="heading">{headings[1]}</div>
         <p>
-          CSITAN is goaded with a mission to promote CSIT sector and empower
+          CSITAN is goaded with a mission to promote the CSIT sector and empower
           tech professionals for the betterment of the country.
         </p>
         <ul className="horizontal">
@@ -308,7 +186,7 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
               </div>
 
               <div className="missionTitle">
-                CONNECT STUDENTS INDUSTRY AND FACULTY
+                CONNECT STUDENTS, INDUSTRY, AND FACULTY
               </div>
             </div>
           </li>
@@ -334,6 +212,27 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
           </li>
         </ul>
       </div>
+      <div className="section">
+  <div className="heading">How Can I Join?</div>
+  <p>
+    To become a part of CSITAN and make an impact in the CSIT sector, follow these simple steps:
+  </p>
+  <ul className="join-steps">
+    <li> Visit the <a href="https://docs.google.com/forms/u/1/d/1RpdnJI2KoZYe4fog3F7CxovgCY_RkMAwlNhZhWfnkfA/edit?usp=forms_home&ths=true" target="_blank" rel="noopener noreferrer">registration page</a>.</li>
+    <li> Fill out the membership form with your personal details.</li>
+    <li> Pay the membership fee (if applicable) through the available payment options.</li>
+    <li> Wait for a confirmation email or message with further details.</li>
+    <li> Join our events and start contributing to the CSIT community!</li>
+  </ul>
+  <a
+  href="https://docs.google.com/forms/u/1/d/1oMgPA03XmL_QfDDmB2XCbjO-MVZChQgsSjZ87_n6GBE/edit?usp=forms_home&ths=true"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="new-classname">Join Now</button>
+</a>
+
+</div>
 
       <div
         ref={(ref) => handleRef(ref, 2)}
@@ -351,7 +250,7 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
       >
         <div className="heading">{headings[3]}</div>
         <p>
-          CSITAN is goaded with a mission to promote CSIT sector and empower
+          CSITAN is goaded with a mission to promote the CSIT sector and empower
           tech professionals for the betterment of the country.
         </p>
         <ul className="horizontal">
@@ -364,7 +263,7 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
               </div>
 
               <div className="missionTitle">
-                CONNECT STUDENTS INDUSTRY AND FACULTY
+                CONNECT STUDENTS, INDUSTRY, AND FACULTY
               </div>
             </div>
           </li>

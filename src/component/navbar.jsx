@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="content">
         <div>
           {/* Your logo goes here */}
-          <img src="path/to/your/logo.png" alt="Logo" className="logo" />
+          <img src="" alt="Logo" className="logo" />
         </div>
 
         <div className="menu">
@@ -45,7 +45,7 @@ const Navbar = () => {
                   HOME
                 </NavLink>
               </li>
-              <li onClick={toggleMobileMenu}>NOTICES</li>
+              <li onClick={toggleMobileMenu}><NavLink to="/notices" exact activeClassName="active">NOTICES</NavLink></li>
 
               <li onClick={toggleMobileMenu}>
                 <NavLink to="/about" activeClassName="active">

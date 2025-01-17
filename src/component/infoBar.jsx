@@ -1,5 +1,7 @@
+// infoBar.jsx
 import React from 'react';
 import { FaFacebook, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaBriefcase, FaDownload } from 'react-icons/fa';
+import { Link } from 'react-router-dom'; // Import Link for routing
 import './infoBar.css'; // Import the external CSS file
 
 const InfoBar = () => {
@@ -37,8 +39,13 @@ const InfoBar = () => {
 
         {/* Right Side */}
         <div className="right-side">
-          <button className="underline-text">Login</button>
-          <button className="underline-text">Admin Portal</button>
+          {/* Use Link to render buttons that navigate to routes */}
+          <Link to="/login" className="underline-text">
+            Login
+          </Link>
+          <Link to="/adminpanel" className="underline-text">
+            Admin Portal
+          </Link>
         </div>
       </div>
     </div>

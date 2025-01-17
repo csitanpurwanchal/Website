@@ -1,17 +1,18 @@
 // Content component
-import React from "react";
+import React, { useState } from "react";
 import "./content.css";
 import { GrConnect } from "react-icons/gr";
 import { GiLifeSupport } from "react-icons/gi";
 import { PiFlowerLotusFill } from "react-icons/pi";
 import TeamMemberCard from "../../../component/teamMemberCard";
+
 const Content = ({ headings, handleRef, handleHighlight }) => {
-  const teamMembersData = [
+  const [teamYear, setTeamYear] = useState(2023); // State to track selected year
+  const teamMembersData2023 = [
     {
       name: "Pukar Bajgain",
       position: "President",
-      imageUrl:
-        "https://scontent.fktm8-1.fna.fbcdn.net/v/t39.30808-6/252769449_4473667032670877_8490505483187830605_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=hK8MUDsdkcEAX-QoqZv&_nc_ht=scontent.fktm8-1.fna&oh=00_AfAOY4KJoQoUYT7NIXCTYU9z9inWfP-M5kbHTVfQqoCfCA&oe=65A9C03A",
+      imageUrl: "https://example.com/pukar.jpg",
       contactUrl: "mailto:john@example.com",
       siteUrl: "https://www.johndoe.com",
       facebookUrl: "https://www.facebook.com/johndoe",
@@ -20,22 +21,9 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
       githubUrl: "https://github.com/johndoe",
     },
     {
-      name: "Bishwa Kiran Poudel",
-      position: "Vice-President",
-      imageUrl:
-        "https://scontent.fktm8-1.fna.fbcdn.net/v/t39.30808-6/252769449_4473667032670877_8490505483187830605_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=hK8MUDsdkcEAX-QoqZv&_nc_ht=scontent.fktm8-1.fna&oh=00_AfAOY4KJoQoUYT7NIXCTYU9z9inWfP-M5kbHTVfQqoCfCA&oe=65A9C03A",
-      contactUrl: "mailto:jane@example.com",
-      siteUrl: "https://www.janesmith.com",
-      facebookUrl: "https://www.facebook.com/janesmith",
-      twitterUrl: "https://twitter.com/janesmith",
-      linkedinUrl: "https://www.linkedin.com/in/janesmith",
-      githubUrl: "https://github.com/janesmith",
-    },
-    {
-      name: "John Doe",
-      position: "Software Developer",
-      imageUrl:
-        "https://scontent.fktm8-1.fna.fbcdn.net/v/t39.30808-6/252769449_4473667032670877_8490505483187830605_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=hK8MUDsdkcEAX-QoqZv&_nc_ht=scontent.fktm8-1.fna&oh=00_AfAOY4KJoQoUYT7NIXCTYU9z9inWfP-M5kbHTVfQqoCfCA&oe=65A9C03A",
+      name: "Pukar Bajgain",
+      position: "President",
+      imageUrl: "https://example.com/pukar.jpg",
       contactUrl: "mailto:john@example.com",
       siteUrl: "https://www.johndoe.com",
       facebookUrl: "https://www.facebook.com/johndoe",
@@ -44,20 +32,9 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
       githubUrl: "https://github.com/johndoe",
     },
     {
-      name: "Jane Smith",
-      position: "UX Designer",
-      imageUrl: "https://example.com/janesmith.jpg",
-      contactUrl: "mailto:jane@example.com",
-      siteUrl: "https://www.janesmith.com",
-      facebookUrl: "https://www.facebook.com/janesmith",
-      twitterUrl: "https://twitter.com/janesmith",
-      linkedinUrl: "https://www.linkedin.com/in/janesmith",
-      githubUrl: "https://github.com/janesmith",
-    },
-    {
-      name: "John Doe",
-      position: "Software Developer",
-      imageUrl: "https://example.com/johndoe.jpg",
+      name: "Pukar Bajgain",
+      position: "President",
+      imageUrl: "https://example.com/pukar.jpg",
       contactUrl: "mailto:john@example.com",
       siteUrl: "https://www.johndoe.com",
       facebookUrl: "https://www.facebook.com/johndoe",
@@ -66,20 +43,9 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
       githubUrl: "https://github.com/johndoe",
     },
     {
-      name: "Jane Smith",
-      position: "UX Designer",
-      imageUrl: "https://example.com/janesmith.jpg",
-      contactUrl: "mailto:jane@example.com",
-      siteUrl: "https://www.janesmith.com",
-      facebookUrl: "https://www.facebook.com/janesmith",
-      twitterUrl: "https://twitter.com/janesmith",
-      linkedinUrl: "https://www.linkedin.com/in/janesmith",
-      githubUrl: "https://github.com/janesmith",
-    },
-    {
-      name: "John Doe",
-      position: "Software Developer",
-      imageUrl: "https://example.com/johndoe.jpg",
+      name: "Pukar Bajgain",
+      position: "President",
+      imageUrl: "https://example.com/pukar.jpg",
       contactUrl: "mailto:john@example.com",
       siteUrl: "https://www.johndoe.com",
       facebookUrl: "https://www.facebook.com/johndoe",
@@ -88,42 +54,9 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
       githubUrl: "https://github.com/johndoe",
     },
     {
-      name: "Jane Smith",
-      position: "UX Designer",
-      imageUrl: "https://example.com/janesmith.jpg",
-      contactUrl: "mailto:jane@example.com",
-      siteUrl: "https://www.janesmith.com",
-      facebookUrl: "https://www.facebook.com/janesmith",
-      twitterUrl: "https://twitter.com/janesmith",
-      linkedinUrl: "https://www.linkedin.com/in/janesmith",
-      githubUrl: "https://github.com/janesmith",
-    },
-    {
-      name: "John Doe",
-      position: "Software Developer",
-      imageUrl: "https://example.com/johndoe.jpg",
-      contactUrl: "mailto:john@example.com",
-      siteUrl: "https://www.johndoe.com",
-      facebookUrl: "https://www.facebook.com/johndoe",
-      twitterUrl: "https://twitter.com/johndoe",
-      linkedinUrl: "https://www.linkedin.com/in/johndoe",
-      githubUrl: "https://github.com/johndoe",
-    },
-    {
-      name: "Jane Smith",
-      position: "UX Designer",
-      imageUrl: "https://example.com/janesmith.jpg",
-      contactUrl: "mailto:jane@example.com",
-      siteUrl: "https://www.janesmith.com",
-      facebookUrl: "https://www.facebook.com/janesmith",
-      twitterUrl: "https://twitter.com/janesmith",
-      linkedinUrl: "https://www.linkedin.com/in/janesmith",
-      githubUrl: "https://github.com/janesmith",
-    },
-    {
-      name: "John Doe",
-      position: "Software Developer",
-      imageUrl: "https://example.com/johndoe.jpg",
+      name: "Pukar Bajgain",
+      position: "President",
+      imageUrl: "https://example.com/pukar.jpg",
       contactUrl: "mailto:john@example.com",
       siteUrl: "https://www.johndoe.com",
       facebookUrl: "https://www.facebook.com/johndoe",
@@ -132,9 +65,28 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
       githubUrl: "https://github.com/johndoe",
     },
 
-    // Add more team members as needed
-    // ...
+    // Other 2023 team members...
   ];
+
+  const teamMembersData2024 = [
+    {
+      name: "Sita Kumari",
+      position: "Vice President",
+      imageUrl: "https://example.com/sita.jpg",
+      contactUrl: "mailto:sita@example.com",
+      siteUrl: "https://www.sita.com",
+      facebookUrl: "https://www.facebook.com/sita",
+      twitterUrl: "https://twitter.com/sita",
+      linkedinUrl: "https://www.linkedin.com/in/sita",
+      githubUrl: "https://github.com/sita",
+    },
+    // Other 2024 team members...
+  ];
+
+  // Function to handle year change
+  const handleYearChange = (year) => {
+    setTeamYear(year);
+  };
 
   return (
     <div className="contents">
@@ -179,7 +131,7 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
       >
         <div className="heading">{headings[1]}</div>
         <p>
-          CSITAN is goaded with a mission to promote CSIT sector and empower
+          CSITAN is goaded with a mission to promote the CSIT sector and empower
           tech professionals for the betterment of the country.
         </p>
         <ul className="horizontal">
@@ -190,9 +142,8 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
                   <GrConnect />
                 </div>
               </div>
-
               <div className="missionTitle">
-                CONNECT STUDENTS INDUSTRY AND FACULTY
+                CONNECT STUDENTS, INDUSTRY, AND FACULTY
               </div>
             </div>
           </li>
@@ -218,7 +169,15 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
           </li>
         </ul>
       </div>
-
+      <div className="toggle-options">
+        <select
+          className="year-select"
+          onChange={(e) => handleYearChange(parseInt(e.target.value))}
+        >
+          <option value={2023}>2023 Team</option>
+          <option value={2024}>2024 Team</option>
+        </select>
+      </div>
       <div
         ref={(ref) => handleRef(ref, 2)}
         onMouseEnter={() => handleHighlight(2)}
@@ -227,7 +186,10 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
         <div className="heading">{headings[2]}</div>
         <p>Synergy in Motion: Elevating Together, Winning Forever!</p>
 
-        <TeamMembers teamMembers={teamMembersData} />
+        <TeamMembers
+          teamMembers={teamYear === 2023 ? teamMembersData2023 : teamMembersData2024}
+          handleYearChange={handleYearChange}
+        />
       </div>
     </div>
   );
@@ -235,28 +197,20 @@ const Content = ({ headings, handleRef, handleHighlight }) => {
 
 export default Content;
 
-function TeamMembers({ teamMembers }) {
-  const renderTeamMembers = () => {
-    try {
-      return teamMembers.map((member, index) => {
-        const element = (
-          <div
-            key={index} // Adjust the starting index accordingly
-            className="team-member-section"
-          >
-            <TeamMemberCard {...member} />
-          </div>
-        );
+function TeamMembers({ teamMembers, handleYearChange }) {
+  return (
+    
+    <div className="team-members-container">
+      
+      {teamMembers.map((member, index) => (
+        <div key={index} className="team-member-section">
+          <TeamMemberCard {...member} />
+        </div>
+      ))}
 
-        // Logging the element to help identify issues
-        console.log("Rendered element:", element);
-
-        return element;
-      });
-    } catch (error) {
-      console.error("Error in renderTeamMembers:", error);
-    }
-  };
-
-  return <div className="team-members-container">{renderTeamMembers()}</div>;
+      {/* Option system */}
+     
+    </div>
+  );
 }
+
