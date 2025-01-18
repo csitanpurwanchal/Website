@@ -1,72 +1,102 @@
-/* src/components/NoticeList/NoticeList.css */
+/* Root variables for colors */
+:root {
+  --primary-color: #ce4444;
+  --secondary-color: #b9b9b9;
+  --background-color: #fcf4f4;
+}
 
-/* General styles for the notice list */
+/* Notice list container */
 .notice-list {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 25px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.notice-list-title {
-  text-align: center;
-  font-size: 28px;
-  font-weight: 700;
-  color: #ce4444;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-}
-
-.notice-items {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.notice-item {
-  background-color: #fcf4f4;
-  border-radius: 10px;
   padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Controls section */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.notice-item-title {
-  font-size: 22px;
-  font-weight: 600;
-  color: #ce4444;
-  margin-bottom: 12px;
-  line-height: 1.4;
-}
-
-.notice-item-description {
-  font-size: 16px;
-  color: #333;
-  line-height: 1.7;
-}
-
-.notice-item-date {
+/* Search input */
+.search-input {
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
   font-size: 14px;
-  color: #777;
-  margin-top: 10px;
 }
 
-.notice-attachments h4 {
-  font-size: 16px;
-  color: #ce4444;
+/* Clear button */
+.clear-btn {
+  padding: 10px;
+  margin-left: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.attachment-link {
+.clear-btn:hover {
+  background-color: #a83232;
+}
+
+/* Sort dropdown */
+.sort-select {
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
   font-size: 14px;
-  color: #ce4444;
-  text-decoration: none;
-  border-bottom: 1px solid #ce4444;
 }
 
-.attachment-link:hover {
-  color: #ff4d4d;
-  border-bottom: 1px solid #ff4d4d;
+/* Add button */
+.add-btn {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #a83232;
+}
+
+/* Notice grid */
+.notice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Notice item */
+.notice-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.notice-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.notice-description {
+  font-size: 16px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.notice-date {
+  font-size: 14px;
+  color: var(--secondary-color);
+  font-style: italic;
 }
